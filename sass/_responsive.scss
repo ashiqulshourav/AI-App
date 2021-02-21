@@ -1,0 +1,82 @@
+@media (max-width: 991px) {
+    .navbar-nav,
+    .navbar-toggler {
+        background-color: var(--dark-to-main-color);
+        box-shadow: var(--shadow-black-300);
+    }
+    .navbar-toggler {
+        width: 4.4rem;
+        height: 4.4rem;
+        padding: 0;
+        font-size: 1.7rem;
+        color: #ffffff;
+    }
+    .navbar {
+        .nav-item {
+            margin: 0;
+            padding: .5rem 1.5rem;
+        }
+    }
+    .navbar.navbar-shrink .navbar-toggler,
+    .navbar.navbar-shrink .navbar-nav {
+        background-color: var(--main-color);
+    }
+    .home .home-img .circle {
+        width: 32rem;
+        height: 32rem;
+    }
+    .home .home-img .circle::before {
+        top: 1.8rem;
+        left: 1.8rem;
+        transform-origin: 14.2rem 14.2rem;
+    }
+    .home .home-text h1 {
+        font-size: 4rem;
+    }
+    .how-it-works .how-it-works-item,
+    .pricing .pricing-plan,
+    .app-download .app-download-item,
+    .footer-col {
+        margin-bottom: 3rem;
+    }
+    .how-it-works .how-it-works-item.line-right::before {
+        content: none;
+    }
+    .how-it-works .how-it-works-item {
+        box-shadow: var(--shadow-black-100);
+        border-radius: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .home .home-text {
+        margin-bottom: 8rem;
+    }
+    .effect-wrap .effect-1 {
+        left: 10%;
+    }
+    .fun-facts .fun-facts-img {
+        margin-bottom: 3rem;
+    }
+    .contact-form {
+        margin-top: 2rem;
+    }
+    .section-title h2 {
+        font-size: 3.5rem;
+    }
+    .fun-facts .section-title h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .home .home-text h1 {
+        font-size: 3rem;
+    }
+    .home .home-text p {
+        font-size: 1.6rem;
+    }
+    .section-title h2 {
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,162 @@
+%transition {
+    transition: 0.5s all ease;
+}
+
+%btn {
+    background-color: #ffffff;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    padding: 1.2rem 3rem;
+    border: none;
+    border-radius: 3rem;
+    color: var(--main-color);
+    @extend %transition;
+    box-shadow: var(--shadow-black-300);
+    font-weight: 300;
+}
+
+%imgSetup {
+    max-width: 25rem;
+    width: 100%;
+    box-shadow: var(--shadow-black-100);
+    border-radius: 3.2rem;
+    animation: bounceTop_01 3s ease infinite;
+}
+
+%paragraph {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 300;
+    color: var(--black-400);
+    margin: 0 0 1.5rem;
+}
+
+%h3 {
+    font-size: 2.2rem;
+    margin: 2rem 0;
+    font-weight: 500;
+    color: var(--black-900);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.btn-1,
+.btn-2 {
+    @extend %btn;
+}
+
+.btn-1:hover {
+    color: #ffffff;
+    background-color: var(--main-color);
+}
+
+.btn-1:focus {
+    box-shadow: var(--shadow-black-300);
+}
+
+.btn-2 {
+    background-color: var(--main-color);
+    color: #ffffff;
+    box-shadow: var(--shadow-black-100);
+}
+
+.btn-2:hover {
+    color: var(--main-color);
+    background-color: #ffffff;
+}
+
+.btn-2:focus {
+    box-shadow: var(--shadow-black-100);
+}
+
+.effect-wrap {
+    .effect {
+        position: absolute;
+        z-index: -1;
+    }
+    .effect-1 {
+        top: 20%;
+        left: 20%;
+        font-size: 2rem;
+        color: var(--color-2);
+        animation: spin_01 05s linear infinite;
+    }
+    .effect-2 {
+        top: 10%;
+        right: 5%;
+        font-size: 2.5rem;
+        color: rgba(255, 255, 255, 0.5);
+        animation: spin_01 07s linear infinite;
+    }
+    .effect-3 {
+        bottom: 30%;
+        left: 5%;
+        font-size: 2.5rem;
+        color: var(--color-3);
+        animation: bounceTop_01 03s linear infinite;
+    }
+}
+
+.section-padding {
+    padding: 8rem 0;
+}
+
+.section-title {
+    margin-bottom: 6rem;
+    h2 {
+        font-size: 4rem;
+        color: var(--black-900);
+        text-transform: capitalize;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        span {
+            color: var(--main-color);
+        }
+    }
+}
+
+// Animation 
+@keyframes spin_01 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounceTop_01 {
+    0%,
+    100% {
+        transform: translateY(-3rem);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse_01 {
+    0% {
+        transform: scale(0.94);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 1.2rem rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: scale(0.94);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes zoomInOut_01 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
